@@ -1,0 +1,18 @@
+.header{
+    background-color: aliceblue;
+}
+.header-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.digital-clock{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.digital-clock-btn{
+    padding: 10px 40px;
+}
