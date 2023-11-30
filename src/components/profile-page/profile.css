@@ -16,3 +16,29 @@
 .digital-clock-btn{
     padding: 10px 40px;
 }
+
+
+/* profile main page  */
+.profile-title{
+    margin: 20px 10px;
+
+}
+
+.user-profile-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 10px;
+    margin: 40px 10px;
+
+}
+
+
+/* post main page  */
+
+.post-page-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
