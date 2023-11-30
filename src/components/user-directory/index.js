@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./userDirectory.css";
 
 const UserDirectory = () => {
+  
   return (
     <div className='user-directory'>
         <div className='user-directory-wrap'>
@@ -10,6 +11,6 @@ const UserDirectory = () => {
         </div>
     </div>
   )
-}
 
+}
 export default UserDirectory

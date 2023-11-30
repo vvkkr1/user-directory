@@ -1,10 +1,8 @@
-// import logo from './logo.svg';
-import './App.css';
 import Homepage from './pages';
-
+import "./_app.css";
 function HomeApp() {
   return (
-    <div className="App">
+    <div className="homepage-parent">
       <Homepage/>
     </div>
   );

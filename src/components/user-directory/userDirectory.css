@@ -1,0 +1,18 @@
+.user-directory{
+    border: 1px solid black;
+    max-width: 800px;
+    margin-left: 400px;
+}
+
+.user-directory-wrap{
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: aquamarine;
+
+}
+
+.title-wrap{
+    background-color: aqua;
+}
