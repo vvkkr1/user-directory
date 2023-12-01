@@ -1,17 +1,26 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import "./profile.css";
 import DigitalClock from '../clock-country-main/clock';
 import CountryClock from '../clock-country-main/country-clock';
 
 const UserProfile = () => {
+  const navigate = useNavigate();
+
+
+
+  const navigateToDirectory=()=>{
+    navigate('/')
+  } 
+
   return (
     <div className='user-profile'>
         {/* This is user profile */}
         <div className='user-profile-wrap'>
             <div className='header'>
                 <div className='header-wrap'>
-                    <div className='header-btn'>
-                      <button>Back</button>
+                    <div className='header-btn' >
+                      <button onClick={navigateToDirectory}>Back</button>
                     </div>
 
                     <div className='country-container'>
