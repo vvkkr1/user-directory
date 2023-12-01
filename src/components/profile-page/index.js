@@ -1,17 +1,20 @@
-import React from 'react'
+import React,{useContext, useEffect,useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import "./profile.css";
 import DigitalClock from '../clock-country-main/clock';
 import CountryClock from '../clock-country-main/country-clock';
 
+
 const UserProfile = () => {
   const navigate = useNavigate();
-
 
 
   const navigateToDirectory=()=>{
     navigate('/')
   } 
+  
+  // const data = useContext(UserDataContext);
+
 
   return (
     <div className='user-profile'>
@@ -59,20 +62,14 @@ const UserProfile = () => {
             <div className='post-page-details'>
                 <div className='post-page-details-wrap'>
                     <div className='post-title' style={{padding:"20px 0px"}}>Post title</div>
-                    <div className='post-content'>Content</div>
-                </div>
-                <div className='post-page-details-wrap'>
-                    <div className='post-title' style={{padding:"20px 0px"}}>Post title</div>
-                    <div className='post-content'>Content</div>
-                </div>
-                <div className='post-page-details-wrap'>
-                    <div className='post-title' style={{padding:"20px 0px"}}>Post title</div>
-                    <div className='post-content'>Content</div>
+                    <div className='post-content'>Content:</div>
                 </div>
             </div>
+
         </div>
     </div>
   )
 }
 
-export default UserProfile;
+export default UserProfile
+
