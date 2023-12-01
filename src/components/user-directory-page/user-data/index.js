@@ -2,7 +2,8 @@ import React, { useEffect,useState } from 'react'
 // import { useNavigate } from 'react-router-dom';
 import "./userData.css";
 import UserDirectory from '..';
-import { UserDataContext } from './context';
+// import UserProfile from '../../profile-page';
+// import { UserDataContext } from './context';
 
 
 const UserData = () => {
@@ -32,7 +33,11 @@ const UserData = () => {
       <div>
         {val && val.map((data)=>{
           console.log(data);
-          return <UserDirectory data={data} />
+          return (
+            <>
+              <UserDirectory data={data} />
+            </>
+          )
               
         }
         )}

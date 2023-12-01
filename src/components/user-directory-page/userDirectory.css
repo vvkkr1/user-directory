@@ -28,3 +28,20 @@
     text-align: center;
 }
 
+
+/* post page details  */
+
+.post-page-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.post-title{
+    width: 300px;
+    text-align: center;
+}
+.post-content{
+    width: 300px;;
+    text-align: center;
+}

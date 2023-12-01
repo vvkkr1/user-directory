@@ -27,14 +27,13 @@ useEffect(()=>{
   
 //Array of an object Slice method call
 const val = state.slice(0,1);
-// console.log(val);
+console.log(val);
 
 return(
     <>
-      {val && val.map((user)=>{
-        console.log(val)
-        return <UserProfile user={user}/> 
-      
+      {val && val.map((state)=>{
+        console.log(state)
+        return <UserProfile state={state}/> 
       }
       )}
     </>
