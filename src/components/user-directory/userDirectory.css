@@ -18,7 +18,8 @@
     align-items: center;
     justify-content:space-around;
     background-color:rgba(20, 149, 214, 0.54);
-    border-radius: 15px
+    border-radius: 15px;
+    cursor: pointer;
     
 }
 

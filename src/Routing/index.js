@@ -1,9 +1,11 @@
 import React from 'react'
-import { BrowserRouter,Link, Route,Routes } from 'react-router-dom'
+import { BrowserRouter,Link, Route,Routes,useNavigate } from 'react-router-dom'
 import UserProfile from '../components/profile-page'
 import UserDirectory from '../components/user-directory'
 
 const RoutingComponent = () => {
+  
+
   return (
     <div>
         <BrowserRouter>
@@ -13,10 +15,10 @@ const RoutingComponent = () => {
 
 
               <Routes>
-                <Route exact path='/' element={<UserDirectory/>}/>
+                <Route exact path='/' element={<UserDirectory />}/>
               </Routes>
               <Routes>
-                <Route path='/profile/' element={<UserProfile/>} />
+                <Route path='/profile' element={<UserProfile/>} />
               </Routes>
             </BrowserRouter>
     </div>

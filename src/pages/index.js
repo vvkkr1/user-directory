@@ -2,6 +2,8 @@ import React from 'react'
 import {BrowserRouter,Link,Routes,Route} from "react-router-dom"
 import "./homepage.css";
 import RoutingComponent from '../Routing';
+import UserDirectory from '../components/user-directory';
+import UserProfile from '../components/profile-page';
 // import UserDirectory from '../components/user-directory';
 // import UserProfile from '../components/profile-page';
 // import DigitalClock from '../components/clock-country-main/clock';
@@ -15,14 +17,10 @@ const Homepage = () => {
   return (
     <div className='homepage'>
         <div className='homepage-container'>
-          {/* <CountryClock/> */}
-            {/* <ClockCountry/> */}
-            <RoutingComponent/>
-            {/* <DigitalClock/> */}
-            {/* <UserProfile/> */}
+          <RoutingComponent/>
+          {/* <UserDirectory/> */}
         </div>   
     </div>
   )
 }
-
 export default Homepage
