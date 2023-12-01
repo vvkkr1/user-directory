@@ -1,6 +1,7 @@
 import React from 'react'
 import "./profile.css";
-import DigitalClock from '../clock';
+import DigitalClock from '../clock-country-main/clock';
+import CountryClock from '../clock-country-main/country-clock';
 
 const UserProfile = () => {
   return (
@@ -12,13 +13,21 @@ const UserProfile = () => {
                     <div className='header-btn'>
                       <button>Back</button>
                     </div>
-                    <div className='header-title'>Country Dropdown</div>
+
+                    <div className='country-container'>
+                        <div className='country'>
+                            <CountryClock/>
+                        </div>
+                      {/* Country Dropdown */}
+                      </div>
+
                     <div className='digital-clock'>
                       <DigitalClock/>
                       <div className='digital-clock-btn'>
-                        <button>Pause/Start</button>
+                        {/* <button>Pause/Start</button> */}
                       </div>
                     </div>
+
                 </div>
             </div>
 
