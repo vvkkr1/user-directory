@@ -19,7 +19,7 @@ const UserDirectory = (props) => {
 
           <div className='user-directory-wrap' onClick={navigateToProfile}>
               <div className='title'>Name: {props.data.name} </div>
-              <div className='posts'>Posts: 12</div>
+              <div className='posts'>Posts: 1</div>
           </div>
        
 
@@ -27,12 +27,20 @@ const UserDirectory = (props) => {
                 <div className='profile-page-details-wrap'>
                     <div className='user-profile-details'>
                         <div className='left-user-profile-details'>
-                          <div className='profile-name'>Name</div>
-                          <div className='user-name'>Username | Catch phrase</div>
+                          <div className='profile-name'>Name: {props.data.name}</div>
+                          <div className='user-name'>Username: {props.data.username}</div>
+                          <div className='catch-phrase'>Catch phrase: {props.data.company.catchPhrase}</div>
                         </div>
+
                         <div className='right-user-profile-details'>
-                          <div className='user-profile-address'>Address</div>
-                          <div className='user-profile-email'>Email | Phone</div>
+                          <div className='user-profile-address'>
+                              <div className='address'>Address</div>
+                              <span>City: {props.data.address.city}</span><br/>
+                              <span>Street: {props.data.address.street}</span><br/>
+                              <span>Zipcode: {props.data.address.zipcode}</span>
+                          </div>
+                          <div className='user-profile-email'>Email: {props.data.email}</div>
+                          <div className='user-profile-phone'>Phone: {props.data.phone}</div>
                         </div>
                     </div>
                 </div>

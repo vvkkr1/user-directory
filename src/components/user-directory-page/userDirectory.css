@@ -1,7 +1,7 @@
 .user-directory{
     border: 1px solid black;
     /* max-width: 800px; */
-    margin-left: 500px;
+    /* margin-left: 500px; */
     margin-top: 20px;
     height: 450px;
     width: 700px;
@@ -44,4 +44,24 @@
 .post-content{
     width: 300px;;
     text-align: center;
+}
+
+.left-user-profile-details{
+    padding: 20px 10px;
+}
+
+
+.profile-name{
+    padding: 10px 5px;
+}
+.user-name{
+    padding: 10px 5px;
+}
+
+.catch-phrase{
+    padding: 10px 5px;
+}
+
+.address{
+    padding: 10px 2px;
 }
