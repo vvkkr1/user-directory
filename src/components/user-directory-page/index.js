@@ -35,9 +35,11 @@ const UserDirectory = (props) => {
                         <div className='right-user-profile-details'>
                           <div className='user-profile-address'>
                               <div className='address'>Address</div>
-                              <span>City: {props.data.address.city}</span><br/>
+                              <span>Suite: {props.data.address.suite}</span><br/>
                               <span>Street: {props.data.address.street}</span><br/>
-                              <span>Zipcode: {props.data.address.zipcode}</span>
+                              <span>City: {props.data.address.city}</span><br/>
+                              <span>Zipcode: {props.data.address.zipcode}</span><br/>
+                              <span>Geo: {props.data.address.geo.lat} - {props.data.address.geo.lng}</span>
                           </div>
                           <div className='user-profile-email'>Email: {props.data.email}</div>
                           <div className='user-profile-phone'>Phone: {props.data.phone}</div>
