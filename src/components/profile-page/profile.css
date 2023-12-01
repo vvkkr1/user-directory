@@ -42,3 +42,12 @@
     justify-content: space-evenly;
 }
 
+.post-title{
+    width: 300px;
+    text-align: center;
+}
+.post-content{
+    width: 300px;;
+    text-align: center;
+}
+

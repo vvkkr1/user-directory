@@ -5,7 +5,7 @@ import DigitalClock from '../clock-country-main/clock';
 import CountryClock from '../clock-country-main/country-clock';
 
 
-const UserProfile = () => {
+const UserProfile = (props) => {
   const navigate = useNavigate();
 
 
@@ -61,8 +61,8 @@ const UserProfile = () => {
 
             <div className='post-page-details'>
                 <div className='post-page-details-wrap'>
-                    <div className='post-title' style={{padding:"20px 0px"}}>Post title</div>
-                    <div className='post-content'>Content:</div>
+                    <div className='post-title' style={{padding:"20px 0px"}}>Post title - - -  {props.user.title}</div>
+                    <div className='post-content'>Content - - - {props.user.body}</div>
                 </div>
             </div>
 
