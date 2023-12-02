@@ -1,49 +1,56 @@
-import React, { useEffect,useState } from 'react'
-// import { useNavigate } from 'react-router-dom';
+import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import "./userData.css";
-import UserDirectory from '..';
-// import UserProfile from '../../profile-page';
-// import { UserDataContext } from './context';
 
 
-const UserData = () => {
 
+const UserData = (props) => {
 
-    const[state,setState]=useState("");
-    useEffect(()=>{
-      async function getUsersApi(){
-        try{
-          const response = await fetch("https://jsonplaceholder.typicode.com/users");
-          response?.json()?.then((res)=>{
-            // console.log(res);
-            setState(res);
-          })
-        }
-        catch(error){
-          console.log("Error!!!from userApi",error);
-        }
-      }
-      getUsersApi();
-    },[])
-  
-    // here will try array method 
-    const val = state.slice(0,1);
-    // console.log(val);
-    return (
+  const navigate = useNavigate();
+
+  const navigateToProfile = () => {
+    navigate('/profile');
+  }
+
+    return(
       <div>
-        {val && val.map((data)=>{
-          // console.log(data);
-          return (
-            <>
-              <UserDirectory data={data} />
-            </>
-          )
-              
-        }
-        )}
+         <div className='user-directory'>
+          <div className='title-directory'>Directory</div>
+
+          <div className='user-directory-wrap' onClick={navigateToProfile}>
+              <div className='title'>Name: {props.data.name} </div>
+              <div className='posts'>Posts: 1</div>
+          </div>
+       
+
+        <div className='profile-page-details'>
+                <div className='profile-page-details-wrap'>
+                    <div className='user-profile-details'>
+                        <div className='left-user-profile-details'>
+                          <div className='profile-name'>Name: {props.data.name}</div>
+                          <div className='user-name'>Username: {props.data.username}</div>
+                          <div className='catch-phrase'>Catch phrase: {props.data.company.catchPhrase}</div>
+                        </div>
+
+                        <div className='right-user-profile-details'>
+                          <div className='user-profile-address'>
+                              <div className='address'>Address</div>
+                              <span>Suite: {props.data.address.suite}</span><br/>
+                              <span>Street: {props.data.address.street}</span><br/>
+                              <span>City: {props.data.address.city}</span><br/>
+                              <span>Zipcode: {props.data.address.zipcode}</span><br/>
+                              <span>Geo: {props.data.address.geo.lat} - {props.data.address.geo.lng}</span>
+                          </div>
+                          <div className='user-profile-email'>Email: {props.data.email}</div>
+                          <div className='user-profile-phone'>Phone: {props.data.phone}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
       </div>
+       
     )
 
 }
-
-export default UserData;
+export default UserData

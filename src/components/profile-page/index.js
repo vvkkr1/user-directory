@@ -1,5 +1,4 @@
 import React,{useEffect,useState} from 'react'
-// import UserProfile from "../../profile-page/index"
 // import { UserDataContext } from '../../user-directory-page/user-data/context'
 import ProfileData from "../profile-page/profile-data/index"
 
