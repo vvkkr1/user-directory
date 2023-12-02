@@ -22,18 +22,18 @@ useEffect(()=>{
       }
     }
     getPostsApi();
-    console.log("--------------------")
+    // console.log("--------------------")
 },[])
   
 //Array of an object Slice method call
 const val = state.slice(0,1);
-console.log(val);
+// console.log(val);
 
 return(
     <>
-      {val && val.map((state)=>{
-        console.log(state)
-        return <UserProfile state={state}/> 
+      {val && val.map((state,i)=>{
+        // console.log(state)
+        return <UserProfile state={state} key={i}/> 
       }
       )}
     </>

@@ -32,7 +32,7 @@ const UserData = () => {
     return (
       <div>
         {val && val.map((data)=>{
-          console.log(data);
+          // console.log(data);
           return (
             <>
               <UserDirectory data={data} />
