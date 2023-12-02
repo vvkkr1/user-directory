@@ -7,23 +7,39 @@ const DigitalClock = () => {
 
     function handleTime(){
         let time=new Date().toLocaleTimeString();
-
-        setCurrtime(time)
-    }
+        
+        // console.log(time)
     
+        setCurrtime(time);
+    }
 
-    setInterval(function(){
+    
+     
+      const clearInter = setInterval(function(){
         handleTime();
-    })
+      })
+
+      const getBlank =  clearInterval(function(){
+        clearInter();
+      });
+    
+      function onClickIntervel(){
+        getBlank();
+      }
+    
+            
+        // alert("dfsd")
+        
+  
 
 
     return(
         <div className="digital-clock absolute-center">
             <div className="time">
-                <h1>{currtime}</h1>
+                <h1 >{currtime}</h1>
             </div>
             <div className="time-pause-start-btn">
-                <button>Pause</button>
+                <button onClick={onClickIntervel}>Pause/Start</button>
             </div>
         </div>
     )

@@ -10,7 +10,7 @@ const[countryapi,setCountryApi] = useState("");
                 fetch("http://worldtimeapi.org/api/timezone")
                 .then((response)=>{
                   response.json().then((res)=>{
-                    // console.log(res);
+                    console.log("__________________________________________",res);
                     setCountryApi(res);
                   })
                 })
