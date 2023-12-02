@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react'
-import DigitalClock from '../clock';
+// import DigitalClock from '../clock';
 import "./countryClock.css";
 
 const CountryClock = () => {

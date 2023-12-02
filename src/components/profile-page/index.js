@@ -1,62 +1,43 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
-import "./profile.css";
-import DigitalClock from '../clock-country-main/clock';
-import CountryClock from '../clock-country-main/country-clock';
+import React,{useEffect,useState} from 'react'
+// import UserProfile from "../../profile-page/index"
+// import { UserDataContext } from '../../user-directory-page/user-data/context'
+import ProfileData from "../profile-page/profile-data/index"
 
+const UserProfile = () => {
 
-const UserProfile = (props) => {
-  const navigate = useNavigate();
+const[state,setState]=useState("")
 
-
-  const navigateToDirectory=()=>{
-    navigate('/')
-  } 
+useEffect(()=>{
+    async function getPostsApi(){
+      try{
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+         response.json().then((res)=>{
+          // console.log(res);
+          
+          setState(res);
+         })
+        // console.log(response)
+      }
+      catch(error){
+        console.log("Error",error);
+      }
+    }
+    getPostsApi();
+    // console.log("--------------------")
+},[])
   
-  // const data = useContext(UserDataContext);
+//Array of an object Slice method call
+const val = state.slice(0,1);
+// console.log(val);
 
-
-  return (
-    <div className='user-profile'>
-        {/* This is user profile */}
-        <div className='user-profile-wrap'>
-            <div className='header'>
-                <div className='header-wrap'>
-                    <div className='header-btn' >
-                      <button onClick={navigateToDirectory}>Back</button>
-                    </div>
-
-                    <div className='country-container'>
-                        <div className='country'>
-                            <CountryClock/>
-                        </div>
-                      {/* Country Dropdown */}
-                      </div>
-
-                    <div className='digital-clock'>
-                      <DigitalClock/>
-                      <div className='digital-clock-btn'>
-                        {/* <button>Pause/Start</button> */}
-                      </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div className='profile-title absolute-center'>Profile page</div>
-
-
-            <div className='post-page-details'>
-                <div className='post-page-details-wrap'>
-                    <div className='post-title' style={{padding:"20px 0px"}}>Post title - - -  {props.state.title}</div>
-                    <div className='post-content'>Content - - - {props.state.body}</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
+return(
+    <>
+      {val && val.map((state,i)=>{
+        // console.log(state)
+        return <ProfileData state={state} key={i}/> 
+      }
+      )}
+    </>
   )
 }
-
-export default UserProfile
-
+export default UserProfile;

@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import UserProfile from '../../components/profile-page'
-import UserDirectory from '../../components/user-directory-page'
+// import UserDirectory from '../../components/user-directory-page'
 import UserData from '../../components/user-directory-page/user-data'
-import ProfileData from '../../components/profile-page/profile-data'
+// import ProfileData from '../../components/profile-page/profile-data'
 // import ProfileData from '../../components/profile-page/profile-data'
 // import UserDirectory from '../components/user-directory-page'
 
@@ -25,8 +25,8 @@ const RoutingComponent = () => {
 
               </Routes>
               <Routes>
-                {/* <Route path='/profile' element={<UserProfile />} /> */}
-                <Route path = '/profile' element={<ProfileData/>}/>
+                <Route path='/profile' element={<UserProfile />} />
+                {/* <Route path = '/profile' element={<ProfileData/>}/> */}
               </Routes>
             </BrowserRouter>
     </div>
